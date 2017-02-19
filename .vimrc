@@ -75,8 +75,16 @@ filetype plugin indent on
 " Show Line #s
 set number
 
+" Show Line, Column, & percent in bottom-right of screen
+" - Would be cool if I could just show Column & Percent instead (^set number)
+set ruler
+
 " Highlight the current line
 set cursorline
+
+" Give '#'-many lines at edges of screen (for context when scrolling)
+" [Default is 0]
+set scrolloff=2
 
 " Speeds up stuff like macros; don't redraw screen for every little thing.
 set lazyredraw
