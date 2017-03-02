@@ -35,6 +35,10 @@ Plugin 'VundleVim/Vundle.vim'
 " - Has other nifty options. Checkout GitHub page for details
 
 Plugin 'jiangmiao/auto-pairs'
+
+" Color Schemes
+Plugin 'tomasr/molokai'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -99,10 +103,20 @@ set showmatch
 
 " Incremental search as you type; like Google search, in a way
 set incsearch
-
 " Highlight search results
 set hlsearch
+" ignore case during search...
+set ignorecase
+" ...unless a capital letter is in the search term
+set smartcase
 
+" Show certain trailing characters (from GitHub, martyn/.vim)
+set list
+set listchars=tab:\ \ ,trail:·
+
+" Always use 256 colors
+set t_Co=256
+colorscheme molokai
 " Folding -- add this later, looks useful.
 " set foldenable
 " set foldstartlevel=10 "opens all folds 10 lvls deep on loading a file w/ folds
